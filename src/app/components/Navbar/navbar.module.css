@@ -1,3 +1,7 @@
+.navbar {
+    z-index: 999;
+}
+
 .navItens {
     display: flex;
     flex-direction: row;
