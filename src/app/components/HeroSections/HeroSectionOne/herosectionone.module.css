@@ -1,0 +1,9 @@
+.txt {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerOne {
+    background-color: #E6FFFC;
+    border-radius: 12px;
+}
