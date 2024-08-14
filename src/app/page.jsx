@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <div>
-      {loading ? (
+      {/* {loading ? (
         <p>Carregando...</p>
       ) : error ? (
         <p>Erro ao carregar imóveis</p>
@@ -43,7 +43,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      )}
+      )} */}
     </div>
   );
 }

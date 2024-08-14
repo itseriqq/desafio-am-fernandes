@@ -17,9 +17,8 @@ O desafio consistiu em desenvolver uma ou mais páginas web que realizassem uma 
 
 - **Next.js 14.2**: Framework utilizado para desenvolver o projeto.
 - **React**: Biblioteca JavaScript para criar interfaces de usuário.
-- **Biblioteca de Estilização**: Utilizada para estilizar as páginas (ex: Tailwind CSS, Bootstrap).
+- **Biblioteca de Estilização**: Utilizada para estilizar as páginas (ex: MaterialUI, Bootstrap).
 - **Axios**: Biblioteca para fazer requisições HTTP.
-- **MaterialUI**: Biblioteca com ícones e estilizações prontas.
 
 ## API Utilizada
 

@@ -1,0 +1,48 @@
+.navItens {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navItensSm {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    top: 80px;
+    background-color: white;
+    width: 100%;
+}
+
+.dNone {
+    display: none;
+}
+
+
+@media(min-width: 768px){
+    .toggler {
+        display: none;
+    }
+
+    .navItensSm {
+        display: none;
+    }
+
+    .dNoneSm {
+        display: none;
+    } 
+}
+
+@media (max-width: 768px){
+    .toggler {
+        display: block;
+    }
+
+    .dNoneLg {
+        display: none;
+    } 
+}
