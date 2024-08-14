@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="navbar">
             <div className="" href="#">
                 <Link href='#'>
-                    <img src="/logo.png" width="160" height="50" className="d-inline-block align-top" alt="Logo" />
+                    <img src="/logo.png" width="200" height="60" className="d-inline-block align-top" alt="Logo" />
                 </Link>
             </div>
             {/* inicio itens padrao */}
