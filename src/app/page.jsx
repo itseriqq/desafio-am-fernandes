@@ -8,7 +8,9 @@ export default function Home() {
 
   return (
     <>
-      <HeroSectionOne />
+      <div className={styles.corpo}>
+        <HeroSectionOne />
+      </div>
     </>
   );
 }

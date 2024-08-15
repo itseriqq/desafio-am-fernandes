@@ -1,15 +1,21 @@
 import Image from 'next/image'
 import React from 'react'
 import styles from "./herosectionone.module.css"
+import GlobalsStyles from "@/app/globals.css"
+import Link from 'next/link'
 
 const HeroSectionOne = () => {
     return (
-        <div className={`container ${styles.containerOne}`}>
-            <div className="row">
-                <div className="col-6">
+        <div className={`container ${styles.container}`}>
+            <div className="row d-flex align-items-center justify-content-center">
+                <div className="col-12">
                     <div className={styles.txt}>
-                        <h1>Encontre os melhores lugares para morar.</h1>
-                        <h3>Tudo que você procura está aqui!</h3>
+                        <h1>Construa um lar.</h1>
+                        <h3>Tudo que você procura, nós temos aqui!</h3>
+                    </div>
+                    <div className={`${styles.botoes}`}>
+                        <button className={`${styles.botao}`}>CONHECER</button>
+                        <Link className={`botaoLink`} href='/imoveis'>IMÓVEIS</Link>
                     </div>
                 </div>
             </div>

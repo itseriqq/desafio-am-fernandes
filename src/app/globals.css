@@ -9,7 +9,9 @@
 
 .botaogeral {
   cursor: pointer;
-  padding: 10px 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 120px;
   color: white;
   margin: 10px;
   border: 1px solid #00355E;
@@ -18,6 +20,27 @@
 }
 
 .botaogeral:hover {
+  background-color: #00233E;
+  border: 1px solid #00233E;
+}
+
+.botaoLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 120px;
+  color: white;
+  margin: 10px;
+  border: 1px solid #00355E;
+  border-radius: 12px;
+  background-color: #00355E;
+  text-decoration: none;
+}
+
+.botaoLink:hover {
   background-color: #00233E;
   border: 1px solid #00233E;
 }
