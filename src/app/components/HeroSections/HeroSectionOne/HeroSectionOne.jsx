@@ -10,8 +10,8 @@ const HeroSectionOne = () => {
             <div className="row d-flex align-items-center justify-content-center">
                 <div className="col-12">
                     <div className={styles.txt}>
-                        <h1>Construa um lar.</h1>
-                        <h3>Tudo que você procura, nós temos aqui!</h3>
+                        <h1>Construa o seu lar.</h1>
+                        <h3>Os seus sonhos nós construímos aqui!</h3>
                     </div>
                     <div className={`${styles.botoes}`}>
                         <button className={`${styles.botao}`}>CONHECER</button>

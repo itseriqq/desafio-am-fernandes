@@ -23,7 +23,7 @@ const Navbar = () => {
             </div>
             {/* inicio itens padrao */}
             <div className={styles.navItens} id="">
-                <Link href='#' className={`${styles.linkNav} ${styles.dNoneLg}`}>Início</Link>
+                <Link href='/' className={`${styles.linkNav} ${styles.dNoneLg}`}>Início</Link>
                 <Link href='/imoveis' className={`${styles.linkNav} ${styles.dNoneLg}`}>Imóveis</Link>
                 <Link href='#' className={`${styles.linkNav} ${styles.dNoneLg}`}>Contato</Link>
                 <Link href='#' className={`${styles.linkNav} ${styles.dNoneLg}`}>Localização</Link>

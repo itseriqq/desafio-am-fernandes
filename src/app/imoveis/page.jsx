@@ -1,7 +1,8 @@
 'use client'
-import React, { useEffect, useState } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import styles from "./imoveis.module.css";
 import axios from 'axios';
+import ImovelCard from "../components/ImovelCard/ImovelCard";
 
 export default function ImoveisPage() {
 
@@ -23,27 +24,8 @@ export default function ImoveisPage() {
     };
     FetchImoveis();
   }, []);
-  
 
   return (
-    <div>
-      {/* {loading ? (
-        <p>Carregando...</p>
-      ) : error ? (
-        <p>Erro ao carregar os imóveis</p>
-      ) : (
-        <div>
-          {imoveis.map((imovel, index) => (
-            <div key={index}>
-              <h2>{imovel.nome}</h2>
-              <p>{imovel.rua}, {imovel.num}, {imovel.bairro}</p>
-              <p>{imovel.cidade} - {imovel.cep}</p>
-              <p>Preço: R$ {imovel.planta.preco}</p>
-              <img src={imovel.fachada} alt={`Fachada do ${imovel.nome}`} />
-            </div>
-          ))}
-        </div>
-      )} */}
-    </div>
+    <ImovelCard></ImovelCard>
   );
 }
