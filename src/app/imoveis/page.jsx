@@ -144,7 +144,7 @@ export default function ImoveisPage() {
       </div>
 
       <div className={styles.imoveisContainer}>
-        {loading ? <p>Carregando os imóveis...</p> : error ? <p>Erro no carregamento</p> : (
+        {loading ? <p>Carregando os imóveis...</p> : error ? <p>Erro no carregamento</p> : filteredImoveis.length === 0 ? ( <div className={styles.noResults}> <span>Não foram encontrados resultados para sua busca</span></div>) :(
           filteredImoveis.map((imovel, index) => (
             <ImovelCard key={index} imovel={imovel} />
           ))
