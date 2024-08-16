@@ -1,34 +1,52 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from "react";
 import styles from "./imoveis.module.css";
 import axios from 'axios';
 import ImovelCard from "../components/ImovelCard/ImovelCard";
-import { TextField } from "@mui/material";
 
 export default function ImoveisPage() {
-
   const [imoveis, setImoveis] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [filters, setFilters] = useState({
+    localizacao: '',
+    quartos: '',
+    vagas: '',
+    preco: '',
+    bairro: ''
+  });
 
   useEffect(() => {
-    const FetchImoveis = async () => {
+    const fetchImoveis = async () => {
       try {
-        const res = await axios.get(`https://api.estagio.amfernandes.com.br/imoveis`);
+        const res = await axios.get('https://api.estagio.amfernandes.com.br/imoveis');
         setImoveis(res.data);
-        console.log(res);
       } catch (error) {
         setError(error);
       } finally {
         setLoading(false);
       }
     };
-    FetchImoveis();
+    fetchImoveis();
   }, []);
+
+  const handleFilterChange = (e) => {
+    setFilters({
+      ...filters,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const filteredImoveis = imoveis.filter(imovel => {
+    return (!filters.localizacao || imovel.rua.toLowerCase().includes(filters.localizacao.toLowerCase())) &&
+      (!filters.quartos || imovel.planta.dorms === parseInt(filters.quartos)) &&
+      (!filters.vagas || imovel.planta.vagas === parseInt(filters.vagas)) &&
+      (!filters.preco || (filters.preco === 'ordemMenorPreco' ? imovel.planta.preco <= filters.precoValue : imovel.planta.preco >= filters.precoValue)) &&
+      (!filters.bairro || imovel.bairro.toLowerCase().includes(filters.bairro.toLowerCase()));
+  });
 
   return (
     <>
-
       <div className={styles.filterBar}>
         <div className={styles.input}>
           <label htmlFor="text">Busque por Localização</label>
@@ -74,8 +92,12 @@ export default function ImoveisPage() {
 
       </div>
 
-      <div className="container">
-        <ImovelCard></ImovelCard>
+      <div className={styles.imoveisContainer}>
+        {loading ? <p>Carregando os imóveis...</p> : error ? <p>Erro no carregamento</p> : (
+          filteredImoveis.map(imovel => (
+            <ImovelCard key={imovel.cep} imovel={imovel} />
+          ))
+        )}
       </div>
     </>
   );

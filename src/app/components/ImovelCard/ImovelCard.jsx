@@ -1,14 +1,10 @@
 import React from "react";
-import BedIcon from "@mui/icons-material/Bed";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Image from "next/image";
-import styles from "./imovelcard.module.css"
+import styles from "./imovelcard.module.css";
 
 const ImovelCard = ({ imovel }) => (
   <div className={styles.card}>
-
-    {/* inicio tag */}
-
+    {/* início tag */}
     <div className={styles.tag}>
       <span>Exclusivo</span>
     </div>
@@ -16,25 +12,27 @@ const ImovelCard = ({ imovel }) => (
 
     {/* imagem */}
     <div className={styles.img}>
-      <Image src="https://firebasestorage.googleapis.com/v0/b/easyhouse-amf.appspot.com/o/taste.png?alt=media" width={500} height={500}></Image>
+      <Image src={imovel.fachada} width={500} height={300} alt={imovel.nome} />
     </div>
     {/* fim da imagem */}
 
-    {/* inicio descricao */}
+    {/* início descricao */}
     <div className={styles.desc}>
       <span className={styles.categoria}>Apartamento</span>
-      <h2 className={styles.preco}>R$ 1.200.000</h2>
+      <h2 className={styles.preco}>R$ {imovel.planta.preco.toLocaleString()}</h2>
       <div className={styles.MetragemDormsVagas}>
-        <span>3 quartos</span>
+        <span>{imovel.planta.dorms} quartos</span>
+        {imovel.planta.vagas !== null && (
+          <>
+            <span>•</span>
+            <span>{imovel.planta.vagas} vagas</span>
+          </>
+        )}
         <span>•</span>
-        <span>2 vagas</span>
-        <span>•</span>
-        <span>
-          75 m²
-        </span>
+        <span>{imovel.planta.metragem} m²</span>
       </div>
       <div className={styles.local}>
-        Rua Kugler, Vila Gilda - Santo André
+        {imovel.rua}, {imovel.bairro} - {imovel.cidade}
       </div>
     </div>
     {/* fim descricao */}

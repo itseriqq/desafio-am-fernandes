@@ -39,10 +39,24 @@
     border-radius: 5px;
 }
 
-.input .select:hover{
+.input .select:hover {
     background-color: none;
 }
 
 .input .select:focus {
     outline: none;
+}
+
+.imoveisContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+@media (max-width: 500px) {
+    .filterBar {
+        padding: 20px 20px;
+    }
 }
