@@ -35,7 +35,7 @@ const AuthPage = () => {
                         <div className={styles.input}>
                             <label htmlFor="senha">Senha</label>
                             <input
-                                type="text"
+                                type="password"
                                 name="senha"
                                 id="senha"
                                 placeholder="Sua senha"
