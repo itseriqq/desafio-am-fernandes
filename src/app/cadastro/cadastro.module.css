@@ -1,0 +1,130 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 0px;
+    margin-top: 40px;
+}
+
+.container .header h1 {
+    font-weight: 600;
+}
+
+.container .header span {
+    font-size: 14px;
+    color: rgb(129, 129, 129);
+    margin-top: -10px;
+}
+
+.cardAuth {
+    margin-top: 20px;
+    width: 800px;
+    min-height: 450px;
+    border: 0.2px solid rgb(129, 129, 129);
+    border-radius: 12px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+
+.input {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.input label {
+    font-weight: 600;
+}
+
+.input input {
+    width: 90%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+}
+
+.input input:focus {
+    outline: none;
+}
+
+.campos {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.campos .esq, .campos .dir {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campos .forgotPassword a {
+    position: absolute;
+    right: 35px;
+    top: 195px;
+    font-size: 12px;
+    color: rgb(129, 129, 129);
+}
+
+.divBotao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.divBotao .botao {
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80%;
+    /* color: rgb(49, 49, 49); */
+    color: white;
+    margin: 10px;
+    border: 1px solid #00355E;
+    border-radius: 12px;
+    background-color: #00355E;
+    font-weight: 600;
+}
+
+.divBotao .botao:hover {
+    transition: .2s ease-in-out;
+    color: rgb(0, 0, 0);
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #00233E;
+}
+
+.header .createAccount {
+    text-decoration: none;
+    color: #00355E;
+    font-size: 14px;
+}
+
+.erro {
+    color: red;
+    font-size: 12px;
+    margin-bottom: -10px;
+}
+
+@media (max-width: 450px) {
+    .cardAuth {
+        width: 90%;
+    }
+}

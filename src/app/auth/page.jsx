@@ -57,7 +57,7 @@ const AuthPage = () => {
 
                 <div className={styles.cadastro}>
                     <span>Não tem uma conta?</span>
-                    <Link href="/" className={styles.createAccount}>Cadastre-se</Link>
+                    <Link href="/cadastro" className={styles.createAccount}>Cadastre-se</Link>
                 </div>
             </div>
         </>

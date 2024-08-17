@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./imovelcard.module.css";
+import GlobalStyles from "@/app/globals.css"
+import Link from "next/link";
 
 const ImovelCard = ({ imovel }) => (
-  <div className={styles.card}>
+  <Link href="/imoveis/1" className={`link ${styles.card}`}>
     {/* início tag */}
     <div className={styles.tag}>
       <span>Exclusivo</span>
@@ -36,7 +38,7 @@ const ImovelCard = ({ imovel }) => (
       </div>
     </div>
     {/* fim descricao */}
-  </div>
+  </Link>
 );
 
 export default ImovelCard;
