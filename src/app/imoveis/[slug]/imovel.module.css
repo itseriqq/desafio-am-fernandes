@@ -1,0 +1,213 @@
+.container {
+    border-top: 1px solid #e8e8e8;
+    margin-bottom: 60px;
+}
+
+.inicial {
+    display: flex;
+    flex-direction: row;
+    background-color: #c5e3fa17;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.inicial .header {
+    margin-top: 50px;
+    width: 55%;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.inicial .header .headerLegenda .tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 120px;
+    height: 30px;
+    background-color: rgb(199, 199, 199);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+}
+
+.inicial .header .headerLegenda .divBotao {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.inicial .header .headerLegenda .divBotao .botao {
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 200px;
+    color: white;
+    border: 1px solid #00355E;
+    border-radius: 12px;
+    background-color: #00355E;
+    font-weight: 600;
+}
+
+.inicial .header .headerLegenda .divBotao .botao:hover {
+    transition: .2s ease-in-out;
+    color: rgb(0, 0, 0);
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #00233E;
+}
+
+.inicial .header .headerLegenda .headerLegendaTotal {
+    margin-top: 10px;
+    font-weight: 800;
+    font-size: 34px;
+    color: black;
+}
+
+.inicial .header .headerLegenda .headerLegendaFinanciamento {
+    margin-top: -10px;
+    font-weight: 600;
+    font-size: 24px;
+    color: rgb(129, 129, 129);
+}
+
+.inicial .header h1 {
+    font-weight: 700;
+    font-size: 58px;
+}
+
+.inicial .header .headerLegenda {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagem {
+    position: relative;
+    width: 40%;
+    height: 700px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.imagem .botoes {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.imagem .botaoEsq {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border: 1px solid #00355E;
+    border-radius: 50%;
+    background-color: #00355E;
+    font-weight: 600;
+    left: 10px;
+}
+
+.imagem .botaoDir {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border: 1px solid #00355E;
+    border-radius: 50%;
+    background-color: #00355E;
+    font-weight: 600;
+    right: 10px;
+}
+
+
+@media (max-width: 992px) {
+    .inicial {
+        flex-direction: column;
+    }
+
+    .inicial .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        padding-left: 0px;
+        gap: 80px;
+    }
+
+    .inicial .header h1 {
+        font-size: 48px;
+    }
+
+    .inicial .imagem {
+        margin-right: auto;
+        margin-left: auto;
+        width: 500px;
+        height: 500px;
+    }
+
+    .inicial .header .headerLegenda .divBotao {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .inicial .header h1 {
+        font-size: 38px;
+    }
+
+    .inicial .header .headerLegenda .headerLegendaTotal {
+        font-size: 24px;
+    }
+
+    .inicial .header .headerLegenda .headerLegendaFinanciamento {
+        font-size: 18px;
+    }
+
+    .inicial .header .headerLegenda .divBotao {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .inicial .header h1 {
+        font-size: 28px;
+    }
+
+    .inicial .imagem {
+        margin-right: auto;
+        margin-left: auto;
+        width: 250px;
+        height: 300px;
+    }
+}
