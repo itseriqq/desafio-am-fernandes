@@ -28,7 +28,7 @@ const Navbar = () => {
                 <Link href='#' className={`${styles.linkNav} ${styles.dNoneLg}`}>Contato</Link>
                 <Link href='#' className={`${styles.linkNav} ${styles.dNoneLg}`}>Localização</Link>
             </div>
-            <button className={`botaogeral ${styles.dNoneLg}`} type="button">Entrar</button>
+            <Link href='/auth' className={`botaoLink ${styles.dNoneLg}`}>Entrar</Link>
 
             {/* fim itens padrao */}
 

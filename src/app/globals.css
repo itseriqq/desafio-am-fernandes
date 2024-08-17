@@ -17,6 +17,7 @@
   border: 1px solid #00355E;
   border-radius: 12px;
   background-color: #00355E;
+  font-weight: 600;
 }
 
 .botaogeral:hover {
@@ -31,13 +32,14 @@
   cursor: pointer;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 120px;
+  width: 100px;
   color: white;
   margin: 10px;
   border: 1px solid #00355E;
   border-radius: 12px;
   background-color: #00355E;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .botaoLink:hover {

@@ -14,8 +14,8 @@ const HeroSectionOne = () => {
                         <h3>Os seus sonhos nós construímos aqui!</h3>
                     </div>
                     <div className={`${styles.botoes}`}>
-                        <button className={`${styles.botao}`}>CONHECER</button>
-                        <Link className={`botaoLink`} href='/imoveis'>IMÓVEIS</Link>
+                        <button className={`${styles.botao}`}>Conhecer</button>
+                        <Link className={`botaoLink`} href='/imoveis'>Imóveis</Link>
                     </div>
                 </div>
             </div>

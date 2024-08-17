@@ -33,12 +33,13 @@
     cursor: pointer;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 120px;
-    color: black;
+    width: 110px;
+    color: rgb(49,49,49);
     margin: 10px;
     border: 1px solid black;
     border-radius: 12px;
     background-color: white;
+    font-weight: 600;
 }
 
 .botao:hover {
