@@ -86,7 +86,7 @@ const CadastroPage = () => {
     const handleEmailBlur = () => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email) || (!email.endsWith('.com') && !email.endsWith('.com.br'))) {
-            setErroEmail('E-mail inválido. Use o formato email@email.com ou email@email.com.br.');
+            setErroEmail('E-mail inválido. Use o formato amfernandes@email.com');
         } else {
             setErroEmail('');
         }
@@ -118,7 +118,7 @@ const CadastroPage = () => {
 
     const handleDataNascimentoBlur = () => {
         if (!isValidDate(dataNascimento)) {
-            setErroDataNascimento('Data inválida. Use o formato DD/MM/AAAA.');
+            setErroDataNascimento('Data ou formato inválido. Use DD/MM/AAAA.');
         } else {
             setErroDataNascimento('');
         }
@@ -155,7 +155,7 @@ const CadastroPage = () => {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h1>Crie sua conta!</h1>
-                    <span>Ou <Link href="/cadastro" className={styles.createAccount}>faça login</Link> se já possuir uma conta.</span>
+                    <span>Ou <Link href="/auth" className={styles.createAccount}>faça login</Link> se já possuir uma conta.</span>
                 </div>
 
                 <div className={styles.cardAuth}>

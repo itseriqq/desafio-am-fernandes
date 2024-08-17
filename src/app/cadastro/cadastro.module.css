@@ -30,10 +30,10 @@
     margin-top: 20px;
     width: 800px;
     min-height: 450px;
-    border: 0.2px solid rgb(129, 129, 129);
     border-radius: 12px;
     padding-top: 10px;
     margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .input {

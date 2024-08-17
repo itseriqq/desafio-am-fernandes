@@ -30,7 +30,7 @@
     margin-top: 20px;
     width: 400px;
     min-height: 315px;
-    border: 0.2px solid rgb(129, 129, 129);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     padding-top: 10px;
 }
@@ -114,7 +114,7 @@
     font-weight: 400;
 }
 
-.cadastro .createAccount {
+.cadastro .createAccount, .header .createAccount {
     text-decoration: none;
     color: #00355E;
     font-size: 14px;

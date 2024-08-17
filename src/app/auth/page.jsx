@@ -9,7 +9,7 @@ const AuthPage = () => {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h1>Bem vindo de volta!</h1>
-                    <span>Entre ou crie sua conta.</span>
+                    <span>Ou <Link href="/cadastro" className={styles.createAccount}>crie uma conta</Link> se ainda não possuir uma.</span>
                 </div>
 
                 {/* inicio card auth */}
