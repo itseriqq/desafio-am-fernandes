@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./imoveis.module.css";
 import axios from 'axios';
 import ImovelCard from "../components/ImovelCard/ImovelCard";
+import Pagination from '@mui/material/Pagination';
 
 export default function ImoveisPage() {
   const [imoveis, setImoveis] = useState([]);
@@ -15,6 +16,8 @@ export default function ImoveisPage() {
     preco: '',
     bairro: ''
   });
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 16;
 
   useEffect(() => {
     const fetchImoveis = async () => {
@@ -35,7 +38,7 @@ export default function ImoveisPage() {
       ...filters,
       [e.target.name]: e.target.value
     });
-    getFilteredImoveis()
+    setCurrentPage(1); // Reset to page 1 when filters change
   };
 
   const getFilteredImoveis = () => {
@@ -65,6 +68,12 @@ export default function ImoveisPage() {
   };
 
   const filteredImoveis = getFilteredImoveis();
+
+  const paginatedImoveis = filteredImoveis.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+  const totalPages = Math.ceil(filteredImoveis.length / itemsPerPage);
 
   return (
     <>
@@ -143,12 +152,35 @@ export default function ImoveisPage() {
         </div>
       </div>
 
+      <div className={styles.paginationContainer}>
+        <Pagination
+          count={totalPages}
+          page={currentPage}
+          onChange={(event, value) => setCurrentPage(value)}
+          color="primary"
+        />
+      </div>
+
       <div className={styles.imoveisContainer}>
-        {loading ? <p>Carregando os imóveis...</p> : error ? <p>Erro no carregamento</p> : filteredImoveis.length === 0 ? ( <div className={styles.noResults}> <span>Não foram encontrados resultados para sua busca</span></div>) :(
-          filteredImoveis.map((imovel, index) => (
+        {loading ? <p>Carregando os imóveis...</p> : error ? <p>Erro no carregamento</p> : paginatedImoveis.length === 0 ? (
+          <div className={styles.noResults}>
+            <span>Não foram encontrados resultados para sua busca</span>
+          </div>
+        ) : (
+          paginatedImoveis.map((imovel, index) => (
             <ImovelCard key={index} imovel={imovel} />
           ))
         )}
+      </div>
+
+      <div className={styles.paginationContainer}>
+        <Pagination
+          style={{ marginBottom: '60px' }}
+          count={totalPages}
+          page={currentPage}
+          onChange={(event, value) => setCurrentPage(value)}
+          color="primary"
+        />
       </div>
     </>
   );

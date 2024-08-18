@@ -13,6 +13,12 @@
     border-bottom: 1px solid #e8e8e8;
 }
 
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .input {
     display: flex;
     align-items: flex-start;
