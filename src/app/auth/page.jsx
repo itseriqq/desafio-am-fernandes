@@ -55,7 +55,7 @@ const AuthPage = () => {
 
                 {/* fim card auth */}
 
-                <div className={styles.cadastro}>
+                <div className={styles.cadastro} style={{marginBottom: '25px'}}>
                     <span>Não tem uma conta?</span>
                     <Link href="/cadastro" className={styles.createAccount}>Cadastre-se</Link>
                 </div>

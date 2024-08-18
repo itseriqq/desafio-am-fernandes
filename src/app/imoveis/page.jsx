@@ -181,7 +181,7 @@ export default function ImoveisPage() {
       {loading ? (
         ' '
       ) : (
-        <div className={styles.paginationContainer}>
+        <div className={styles.paginationContainer} style={{marginBottom: '40px'}}>
           <Pagination
             count={totalPages}
             page={currentPage}
