@@ -2,14 +2,16 @@
 import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import axios from 'axios';
-import HeroSectionOne from "./components/HeroSections/HeroSectionOne/HeroSectionOne.jsx";
+import HeroSection from "./components/CustomizedSections/HeroSection/HeroSection.jsx";
+import AboutTheCompany from "./components/CustomizedSections/AboutTheCompany/AboutTheCompany.jsx";
 
 export default function Home() {
 
   return (
     <>
       <div className={styles.corpo}>
-        <HeroSectionOne />
+        <HeroSection />
+        <AboutTheCompany></AboutTheCompany>
       </div>
     </>
   );
