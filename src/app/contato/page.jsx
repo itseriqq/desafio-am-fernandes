@@ -77,11 +77,11 @@ const ContatoPage = () => {
               <h1>Informações de Contato</h1>
               <div className={styles.item}>
                 <LocationOnOutlinedIcon />
-                <span>Rua Tal, 123 - Santo André, SP</span>
+                <span>Av. Pereira Barreto, 1479 - Baeta Neves, São Bernardo do Campo</span>
               </div>
               <div className={styles.item}>
                 <LocalPhoneOutlinedIcon />
-                <span>(11) 5999-9999</span>
+                <span>(11) 98306-4040</span>
               </div>
               <div className={styles.item}>
                 <EmailOutlinedIcon />

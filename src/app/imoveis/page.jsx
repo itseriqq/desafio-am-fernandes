@@ -152,14 +152,19 @@ export default function ImoveisPage() {
         </div>
       </div>
 
-      <div className={styles.paginationContainer}>
-        <Pagination
-          count={totalPages}
-          page={currentPage}
-          onChange={(event, value) => setCurrentPage(value)}
-          color="primary"
-        />
-      </div>
+      {loading ? (
+        ' '
+      ) : (
+        <div className={styles.paginationContainer}>
+          <Pagination
+            count={totalPages}
+            page={currentPage}
+            onChange={(event, value) => setCurrentPage(value)}
+            color="primary"
+            shape="rounded"
+          />
+        </div>
+      )}
 
       <div className={styles.imoveisContainer}>
         {loading ? <p>Carregando os imóveis...</p> : error ? <p>Erro no carregamento</p> : paginatedImoveis.length === 0 ? (
@@ -173,15 +178,19 @@ export default function ImoveisPage() {
         )}
       </div>
 
-      <div className={styles.paginationContainer}>
-        <Pagination
-          style={{ marginBottom: '60px' }}
-          count={totalPages}
-          page={currentPage}
-          onChange={(event, value) => setCurrentPage(value)}
-          color="primary"
-        />
-      </div>
+      {loading ? (
+        ' '
+      ) : (
+        <div className={styles.paginationContainer}>
+          <Pagination
+            count={totalPages}
+            page={currentPage}
+            onChange={(event, value) => setCurrentPage(value)}
+            color="primary"
+            shape="rounded"
+          />
+        </div>
+      )}
     </>
   );
 }

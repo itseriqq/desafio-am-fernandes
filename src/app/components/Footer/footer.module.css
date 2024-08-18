@@ -1,0 +1,90 @@
+.footer {
+    background-color: #f8f9fa; /* cor de fundo do footer */
+    padding: 3rem 0;
+    color: rgb(129,129,129); /* cor do texto */
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .logoLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .logoText {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .icon {
+    font-size: 2rem;
+  }
+  
+  .infoText {
+    font-size: 0.875rem;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: rgb(129,129,129);
+  }
+  
+  .navLink:hover {
+    color: #00355E;
+  }
+  
+  .social {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .socialIcon {
+    color: #6c757d;
+  }
+  
+  .socialIcon:hover {
+    color: #00355E;
+  }
+  
+  .footerBottom {
+    margin-top: 3rem;
+    border-top: 1px solid #dee2e6;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .copyRight {
+    font-size: 0.875rem;
+  }
+  
+  .footerLinks {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footerLink {
+    text-decoration: none;
+    color: #00355E;
+  }
+  
+  .footerLink:hover {
+    color: #00355E;
+  }
+  
