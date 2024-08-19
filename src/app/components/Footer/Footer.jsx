@@ -80,10 +80,10 @@ export default function Footer() {
                         &copy; 2024 AM Fernandes. Todos os direitos reservados.
                     </Typography>
                     <Box className={styles.footerLinks}>
-                        <Link href="https://br.linkedin.com/in/oerickaugusto" className={styles.footerLink}>
+                        <Link target="_blank" href="https://br.linkedin.com/in/oerickaugusto" className={styles.footerLink}>
                             Política de Privacidade
                         </Link>
-                        <Link href="https://br.linkedin.com/in/oerickaugusto" className={styles.footerLink}>
+                        <Link target="_blank" href="https://br.linkedin.com/in/oerickaugusto" className={styles.footerLink}>
                             Termos de Uso
                         </Link>
                     </Box>
