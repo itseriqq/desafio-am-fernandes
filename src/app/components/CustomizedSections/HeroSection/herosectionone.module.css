@@ -33,6 +33,10 @@
 }
 
 .botao {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -46,8 +50,8 @@
 }
 
 .botao:hover {
-    color: rgb(73, 73, 73);
-    background-color: rgb(245, 245, 245);
+    color: white;
+    background-color: #00355E;
     border: 1px solid #00233E;
 }
 

@@ -14,7 +14,7 @@ const HeroSection = () => {
                         <h3 style={{marginTop: '-15px'}}>Criamos planos junto com você.</h3>
                     </div>
                     <div className={`${styles.botoes}`}>
-                        {/* <button className={`${styles.botao}`}>Conhecer</button> */} 
+                        <Link className={`${styles.botao}`} href='/cadastro'>Cadastrar</Link>
                         <Link className={`botaoLink`} href='/imoveis'>Imóveis</Link>
                     </div>
                 </div>

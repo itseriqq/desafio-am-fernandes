@@ -15,17 +15,22 @@ O desafio consistiu em desenvolver uma página web que realizassem uma requisiç
 - **Carrossel**: Foi criado um carrossel que é utilizado na página individual para que o usuário possa navegar entre as imagens do imóvel.
 - **Verificação de Inputs**: Há uma verificação dos dados inseridos nos inputs da página de cadastro, onde dependendo se os dados inseridos pelo usuário constam como inválido, existem mensagens de auxílio para correção dos erros.
 
-### Páginas Desenvolvidas
+### Páginas e Componentes Desenvolvidos
 
 - **Landing Page**: Foi criada uma landing page minimalista e atraente que possuí duas sections. Em ambas as sections, existem botões que levam o usuário às demais páginas do website.
 - **Imóveis**: A página de imóveis é onde ocorre a requisição à API e display dos cards com as informações referentes aos imóveis. Os cards foram todos desenvolvidos manualmente. Nesta página, é onde a parte referente à ordenação ocorre, sendo feito uma ordenação por preço (menor ou maior preço) de acordo com a escolha do usuário. Além disso, há também o display de inputs para filtragem de itens de acordo com os critérios como Localização, Quantidade de Quartos, Quantidade de Vagas e Bairro.
-- ** **:
+- **Imóvel Específico**: A página de imóvel específico funciona apenas como um exemplar dado que a API não possuía um ID único por imóvel e impossibilitando a dinamicidade de requisição para fazer páginas para cada imóvel. Essa página foi desenvolvida utilizando o carrossel mencionado anteriormente.
+- **Contato**: A página de contato possui um formulário para preenchimento onde o usuário pode enviar uma mensagem direto ao e-mail da AM Fernandes e também informações de contato. Além disso, possuí informações da localização da empresa e um breve trecho sobre a empresa.
+- **Localização**: A página de localização possuí tanto informações da localização da sede da empresa quanto um mapa do Google com as informações fornecidas, auxiliando a navegação do usuário.
+- **Página de Autenticação**: A página de autenticação é referente ao login, onde há o botão na navbar para que o usuário faça login com suas credenciais. Dentro dessa página, o usuário pode também clicar nos direcionadores para criar uma conta caso ele não possua uma.
+- **Página de Cadastro**: A página de cadastro pode ser acessada tanto através da landing page quanto da página de autenticação. É nela, também, que foi colocado uma demonstração de verificação de conteúdo dos inputs. Portanto, o usuário só consegue realizar o 'cadastro' caso suas informações correspondam e estejam em um formato válido.
+- **Navbar e Footer**: A navbar e o footer foram desenvolvidos para servirem como pontos de direcionamento. Eles funcionam responsivamente assim como todas as páginas, auxiliando em uma experiência de usuário fluida.
 
 ## Tecnologias Utilizadas
 
 - **Next.js 14.2**: Framework utilizado para desenvolver o projeto.
-- **React**: Biblioteca JavaScript para criar interfaces de usuário.
-- **Biblioteca de Estilização**: Utilizada para estilizar as páginas (ex: MaterialUI, Bootstrap).
+- **React.js**: Biblioteca JavaScript para criar interfaces de usuário.
+- **Biblioteca de Estilização**: Utilizada para estilizar as páginas com ícones e/ou componentes (ex: MaterialUI, Bootstrap).
 - **Axios**: Biblioteca para fazer requisições HTTP.
 
 ## API Utilizada
