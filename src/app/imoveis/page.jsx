@@ -14,7 +14,7 @@ export default function ImoveisPage() {
     quartos: '',
     vagas: '',
     preco: '',
-    bairro: ''
+    ordenacao: ''
   });
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 16;
@@ -38,7 +38,7 @@ export default function ImoveisPage() {
       ...filters,
       [e.target.name]: e.target.value
     });
-    setCurrentPage(1); // Reset to page 1 when filters change
+    setCurrentPage(1); // resets to page 1 every time filters change
   };
 
   const getFilteredImoveis = () => {
@@ -52,15 +52,18 @@ export default function ImoveisPage() {
 
         const quartosMatch = !filters.quartos || imovel.planta.dorms === parseInt(filters.quartos);
         const vagasMatch = !filters.vagas || imovel.planta.vagas === parseInt(filters.vagas);
-        const bairroMatch = !filters.bairro || imovel.bairro.toLowerCase().includes(filters.bairro.toLowerCase());
 
-        return localizacaoMatch && quartosMatch && vagasMatch && bairroMatch;
+        return localizacaoMatch && quartosMatch && vagasMatch;
       })
       .sort((a, b) => {
         if (filters.preco === 'ordemMenorPreco') {
           return a.planta.preco - b.planta.preco;
         } else if (filters.preco === 'ordemMaiorPreco') {
           return b.planta.preco - a.planta.preco;
+        } else if (filters.ordenacao === 'bairroAlfabetica') {
+          return a.bairro.localeCompare(b.bairro);
+        } else if (filters.ordenacao === 'ruaAlfabetica') {
+          return a.rua.localeCompare(b.rua);
         } else {
           return 0;
         }
@@ -73,7 +76,7 @@ export default function ImoveisPage() {
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
-  const totalPages = Math.ceil(filteredImoveis.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredImoveis.length / itemsPerPage); // gets value and rounds up, i.e n=3.125 to n=4
 
   return (
     <>
@@ -140,15 +143,18 @@ export default function ImoveisPage() {
         </div>
 
         <div className={styles.input}>
-          <label htmlFor="bairro">Bairro</label>
-          <input
-            type="text"
-            name="bairro"
-            id="bairro"
-            placeholder="Ex.: Vila Gilda"
-            value={filters.bairro}
+          <label htmlFor="ordenacao">Ordenar por</label>
+          <select
+            id="ordenacao"
+            name="ordenacao"
+            className={styles.select}
+            value={filters.ordenacao}
             onChange={handleFilterChange}
-          />
+          >
+            <option value="">Selecione</option>
+            <option value="bairroAlfabetica">Bairro (Ordem Alfabética)</option>
+            <option value="ruaAlfabetica">Rua (Ordem Alfabética)</option>
+          </select>
         </div>
       </div>
 
@@ -167,7 +173,7 @@ export default function ImoveisPage() {
       )}
 
       <div className={styles.imoveisContainer}>
-        {loading ? <p>Carregando os imóveis...</p> : error ? <p>Erro no carregamento</p> : paginatedImoveis.length === 0 ? (
+        {loading ? <p style={{marginTop: '40px'}}>Aguarde. Carregando os imóveis...</p> : error ? <p style={{marginTop: '40px'}}>Erro no carregamento</p> : paginatedImoveis.length === 0 ? (
           <div className={styles.noResults}>
             <span>Não foram encontrados resultados para sua busca</span>
           </div>
