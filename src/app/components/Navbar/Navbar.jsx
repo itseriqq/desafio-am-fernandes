@@ -33,13 +33,13 @@ const Navbar = () => {
             {/* fim itens padrao */}
 
             {/* inicio itens sm-devices */}
-    
+
             <div className={styles.navItensSm} id="">
-                <Link href='#' className={`${styles.linkNav} ${styles.dNoneSm} ${open ? '' : styles.dNone}`}>Início</Link>
-                <Link href='#' className={`${styles.linkNav} ${styles.dNoneSm} ${open ? '' : styles.dNone}`}>Imóveis</Link>
-                <Link href='#' className={`${styles.linkNav} ${styles.dNoneSm} ${open ? '' : styles.dNone}`}>Contato</Link>
-                <Link href='#' className={`${styles.linkNav} ${styles.dNoneSm} ${open ? '' : styles.dNone}`}>Localização</Link>
-            <button className={`botaogeral ${open ? '' : styles.dNone}`} type="button">Entrar</button>
+                <Link href='/' className={`${styles.linkNav} ${styles.dNoneSm} ${open ? '' : styles.dNone}`} onClick={handleOpen}>Início</Link>
+                <Link href='/imoveis' className={`${styles.linkNav} ${styles.dNoneSm} ${open ? '' : styles.dNone}`} onClick={handleOpen}>Imóveis</Link>
+                <Link href='/contato' className={`${styles.linkNav} ${styles.dNoneSm} ${open ? '' : styles.dNone}`} onClick={handleOpen}>Contato</Link>
+                <Link href='/localizacao' className={`${styles.linkNav} ${styles.dNoneSm} ${open ? '' : styles.dNone}`} onClick={handleOpen}>Localização</Link>
+                <button className={`botaogeral ${open ? '' : styles.dNone}`} type="button" onClick={handleOpen}>Entrar</button>
             </div>
 
             {/* fim itens sm-devices */}

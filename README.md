@@ -4,14 +4,22 @@ Este repositório contém o código desenvolvido por **Erick Augusto** como part
 
 ## Descrição do Projeto
 
-O desafio consistiu em desenvolver uma ou mais páginas web que realizassem uma requisição para uma API fornecida pela AM Fernandes, que retorna dados de imóveis. Com base nos dados obtidos, foi implementado um algoritmo de ordenação que permite ordenar os imóveis.
+O desafio consistiu em desenvolver uma página web que realizassem uma requisição para uma API fornecida pela AM Fernandes, que retorna dados de imóveis. Com base nos dados retornados pela API, foi implementado um algoritmo de ordenação que permite ordenar os imóveis com base no preço (maior ou menor preço), além disso foram criados filtros por localização, quartos e número de vagas disponíveis por imóvel.
 
 ### Funcionalidades Desenvolvidas
 
 - **Requisição à API**: O projeto faz uma requisição GET para a API da AM Fernandes que retorna os dados dos imóveis.
-- **Algoritmo de Ordenação**: Um algoritmo de ordenação foi implementado para ordenar os imóveis por diferentes critérios, como nome do condomínio ou preço.
-- **Interface Visual**: A interface foi projetada para exibir os imóveis de forma clara e atraente, utilizando bibliotecas de estilização para melhorar a experiência do usuário.
-- **Exibição de Imóveis**: Os dados dos imóveis são exibidos em cards, com informações relevantes como nome, bairro, cidade, número de quartos, vagas, metragem, preço e uma imagem da fachada.
+- **Algoritmo de Ordenação**: Um algoritmo de ordenação foi implementado para ordenar os imóveis, no caso o critério de ordenação escolhido foi o preço.
+- **Interface Visual**: A interface foi projetada para exibir os imóveis de forma clara e atraente, utilizando bibliotecas de estilização para melhorar a experiência do usuário. Além disso, foi criada uma navbar e um footer responsivos para auxiliar o usuário na transição entre as páginas do projeto.  
+- **Exibição de Imóveis**: Os dados dos imóveis são exibidos em cards, com informações relevantes como rua, bairro, cidade, número de quartos, vagas, metragem, preço e uma imagem da fachada.
+- **Carrossel**: Foi criado um carrossel que é utilizado na página individual para que o usuário possa navegar entre as imagens do imóvel.
+- **Verificação de Inputs**: Há uma verificação dos dados inseridos nos inputs da página de cadastro, onde dependendo se os dados inseridos pelo usuário constam como inválido, existem mensagens de auxílio para correção dos erros.
+
+### Páginas Desenvolvidas
+
+- **Landing Page**: Foi criada uma landing page minimalista e atraente que possuí duas sections. Em ambas as sections, existem botões que levam o usuário às demais páginas do website.
+- **Imóveis**: A página de imóveis é onde ocorre a requisição à API e display dos cards com as informações referentes aos imóveis. Os cards foram todos desenvolvidos manualmente. Nesta página, é onde a parte referente à ordenação ocorre, sendo feito uma ordenação por preço (menor ou maior preço) de acordo com a escolha do usuário. Além disso, há também o display de inputs para filtragem de itens de acordo com os critérios como Localização, Quantidade de Quartos, Quantidade de Vagas e Bairro.
+- ** **:
 
 ## Tecnologias Utilizadas
 

@@ -95,13 +95,15 @@
     }
 
     .header {
-        width: 100%;
+        width: 90%;
         padding-left: 0px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         margin-bottom: 50px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .title {
@@ -118,5 +120,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media (max-width: 768px){
+    .mapa iframe {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 500px){
+    .mapa iframe {
+        width: 250px;
+        height: 250px;
     }
 }
