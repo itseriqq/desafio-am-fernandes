@@ -24,7 +24,7 @@ const ContatoPage = () => {
           <div className={styles.input}>
             <label htmlFor="nome">Nome</label>
             <input
-              type="password"
+              type="text"
               name="nome"
               id="nome"
               placeholder="Digite seu nome"

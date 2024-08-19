@@ -4,7 +4,7 @@ Este repositório contém o código desenvolvido por **Erick Augusto** como part
 
 ## Descrição do Projeto
 
-O desafio consistiu em desenvolver uma página web que realizassem uma requisição para uma API fornecida pela AM Fernandes, que retorna dados de imóveis. Com base nos dados retornados pela API, foi implementado um algoritmo de ordenação que permite ordenar os imóveis com base no preço (maior ou menor preço), em ordem alfabética em relação ao bairro ou em relação à rua, além disso foram criados filtros por localização, quartos e número de vagas disponíveis por imóvel.
+O desafio consistiu em desenvolver uma página web que realizasse uma requisição para uma API fornecida pela AM Fernandes, que retorna dados de imóveis. Com base nos dados retornados pela API, foi implementado um algoritmo de ordenação que permite ordenar os imóveis com base no preço (maior ou menor preço), em ordem alfabética em relação ao bairro ou em relação à rua, além disso foram criados filtros por localização, quartos e número de vagas disponíveis por imóvel.
 
 ### Funcionalidades Desenvolvidas
 
@@ -43,6 +43,6 @@ A API da AM Fernandes foi utilizada para obter os dados dos imóveis. A rota pri
 
 ## Dúvidas
 
-Para quaisquer dúvidas encontradas, favor entrar em contato a partir do E-mail: 
+Para quaisquer dúvidas ou apontamentos, favor entrar em contato a partir do e-mail: 
 
 - **E-mail**: erickaug13@hotmail.com
