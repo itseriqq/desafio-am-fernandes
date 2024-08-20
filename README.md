@@ -13,6 +13,7 @@ Caro leitor, caso tenha interesse de rodar a aplicação e ter o repositório em
 1. **Clone o repositório**: Clone este repositório em sua máquina local utilizando o comando:
 
 ```
+
  git clone https://github.com/itseriqq/desafio-am-fernandes.git
 
 ```
@@ -22,7 +23,7 @@ Caro leitor, caso tenha interesse de rodar a aplicação e ter o repositório em
 ```
  - cd desafio-am-fernandes
  - npm install 
- 
+
 ```
 
 3. **Inicie a aplicação**: Após a instalação das dependências, inicie o servidor de desenvolvimento:
