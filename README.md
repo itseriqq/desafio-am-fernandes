@@ -8,7 +8,7 @@ O desafio consistiu em desenvolver uma página web que realizasse uma requisiç�
 
 ## Inicialização
 
-Caro leitor, caso tenha interesse de rodar a aplicação, após ter o repositório em sua máquina você deve seguir os seguintes passos:
+Caro leitor, caso tenha interesse de rodar a aplicação e ter o repositório em sua máquina você deve seguir os seguintes passos:
 
 1. **Clone o repositório**: Clone este repositório em sua máquina local utilizando o comando:
 
