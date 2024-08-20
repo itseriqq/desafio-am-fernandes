@@ -6,6 +6,23 @@ Este repositório contém o código desenvolvido por **Erick Augusto** como part
 
 O desafio consistiu em desenvolver uma página web que realizasse uma requisição para uma API fornecida pela AM Fernandes, que retorna dados de imóveis. Com base nos dados retornados pela API, foi implementado um algoritmo de ordenação que permite ordenar os imóveis com base no preço (maior ou menor preço), em ordem alfabética em relação ao bairro ou em relação à rua, além disso foram criados filtros por localização, quartos e número de vagas disponíveis por imóvel.
 
+## Inicialização
+
+Caro leitor, caso tenha interesse de rodar a aplicação, após ter o repositório em sua máquina você deve seguir os seguintes passos:
+
+1. **Clone o repositório**: Clone este repositório em sua máquina local utilizando o comando:
+
+ - git clone https://github.com/itseriqq/desafio-am-fernandes.git
+
+2. **Instale as dependências**: Navegue até o diretório do projeto e instale as dependências necessárias utilizando o npm:
+
+ - cd desafio-am-fernandes
+ - npm install 
+
+3. **Inicie a aplicação**: Após a instalação das dependências, inicie o servidor de desenvolvimento:
+
+ - npm run dev
+
 ### Funcionalidades Desenvolvidas
 
 - **Requisição à API**: O projeto faz uma requisição GET para a API da AM Fernandes que retorna os dados dos imóveis.
